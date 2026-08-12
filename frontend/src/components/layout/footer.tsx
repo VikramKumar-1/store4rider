@@ -23,7 +23,7 @@ const Footer = () => {
       <div className="relative w-full h-[200px] sm:h-[260px] md:h-[300px] overflow-hidden bg-slate-950 flex items-center justify-center">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="/api/footer-image"
+          src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?q=80&w=2000&auto=format&fit=crop"
           alt="Golden Mountain Rider Ultrawide Panoramic Anime Artwork"
           className="w-full h-full object-cover object-center"
         />

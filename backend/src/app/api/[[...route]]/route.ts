@@ -7,7 +7,7 @@ import { errorHandler } from "@/core/middlewares/errorHandler";
 import { connectToDatabase } from "@/core/database/connection";
 
 const applyHeaders = (response: NextResponse, req: NextRequest): NextResponse => {
-  applyCors(response);
+  applyCors(req, response);
   applySecurityHeaders(response);
   applyRequestId(req, response);
   return response;

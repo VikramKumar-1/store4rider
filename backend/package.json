@@ -1,0 +1,46 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev -p 4000",
+    "build": "next build",
+    "start": "next start -p 4000",
+    "lint": "next lint",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.400.0",
+    "@aws-sdk/client-ses": "^3.400.0",
+    "@aws-sdk/s3-request-presigner": "^3.400.0",
+    "@store4riders/shared-types": "workspace:*",
+    "@store4riders/shared-utils": "workspace:*",
+    "@store4riders/shared-validation": "workspace:*",
+    "bcryptjs": "^2.4.3",
+    "csv-parser": "^3.0.0",
+    "dotenv": "^16.6.1",
+    "ioredis": "^5.3.0",
+    "jsonwebtoken": "^9.0.2",
+    "meilisearch": "^0.35.0",
+    "mongoose": "^8.0.0",
+    "next": "15.0.0",
+    "papaparse": "^5.5.4",
+    "pino": "^8.16.0",
+    "pino-pretty": "^10.2.0",
+    "rate-limiter-flexible": "^4.0.0",
+    "razorpay": "^2.9.0",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.5",
+    "@types/jsonwebtoken": "^9.0.4",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.2.2",
+    "vitest": "^1.0.0"
+  }
+}

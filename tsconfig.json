@@ -1,0 +1,10 @@
+{
+  "files": [],
+  "references": [
+    { "path": "./frontend" },
+    { "path": "./backend" },
+    { "path": "./packages/shared-types" },
+    { "path": "./packages/shared-validation" },
+    { "path": "./packages/shared-utils" }
+  ]
+}

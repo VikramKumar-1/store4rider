@@ -1,0 +1,12 @@
+{
+  "name": "@store4riders/eslint-config",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.js",
+  "dependencies": {
+    "eslint": "^8.0.0",
+    "eslint-config-next": "15.0.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-react": "^7.33.0"
+  }
+}

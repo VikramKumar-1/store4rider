@@ -1,0 +1,42 @@
+import bcrypt from "bcryptjs";
+import { UserRepository } from "../user/user.repository";
+import { generateTokens, verifyToken } from "../../core/utils/jwt";
+import { UnauthorizedError, ConflictError } from "../../core/errors/AppError";
+import { setCache, deleteCache } from "../../core/cache/redis";
+import { RegisterInput, LoginInput } from "@store4riders/shared-validation";
+
+export class AuthService {
+  static async register(data: RegisterInput) {
+    const existing = await UserRepository.findByEmail(data.email);
+    if (existing) throw new ConflictError("Email already in use");
+
+    const hashedPassword = await bcrypt.hash(data.password, 12);
+    const user = await UserRepository.create({ ...data, password: hashedPassword });
+    
+    return generateTokens((user as any)._id?.toString() || user.id);
+  }
+
+  static async login(data: LoginInput) {
+    const user = await UserRepository.findByEmailWithPassword(data.email);
+    if (!user) throw new UnauthorizedError("Invalid credentials");
+
+    const isMatch = await bcrypt.compare(data.password, user.password);
+    if (!isMatch) throw new UnauthorizedError("Invalid credentials");
+
+    return generateTokens((user as any)._id?.toString() || user.id);
+  }
+
+  static async refreshToken(oldToken: string) {
+    try {
+      const decoded = verifyToken(oldToken, true);
+      return generateTokens(decoded.userId);
+    } catch (err) {
+      throw new UnauthorizedError("Invalid refresh token");
+    }
+  }
+
+  static async logout(userId: string) {
+    // Optionally blacklist refresh tokens in Redis
+    await setCache(`blacklist:${userId}`, "true", 7 * 24 * 60 * 60);
+  }
+}

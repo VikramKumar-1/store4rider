@@ -20,12 +20,13 @@ const Footer = () => {
       </svg>
 
       {/* Top 4:1 Ultrawide Panoramic Anime Mountain Rider Banner */}
-      <div className="relative w-full h-[200px] sm:h-[260px] md:h-[300px] overflow-hidden bg-slate-950 flex items-center justify-center">
+      <div className="relative w-full h-[200px] sm:h-[240px] md:h-[280px] lg:h-[320px] overflow-hidden bg-slate-950 flex items-center justify-center">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="/images/footer-banner.png"
+          src="/footer-img.jpg"
           alt="Golden Mountain Rider Ultrawide Panoramic Anime Artwork"
-          className="w-full h-full object-cover object-center"
+          className="w-full h-full object-cover object-[center_60%] contrast-[1.15] saturate-[1.1] brightness-[0.95]"
+          style={{ filter: "url(#sharp-filter)" }}
         />
 
         {/* Soft Minimal Gradient Overlay */}

@@ -24,7 +24,7 @@ const HERO_POSTERS = [
     cta: "View Product Description",
     slug: "agv-pista-gp-rr",
     link: "/products/agv-pista-gp-rr",
-    image: "https://images.unsplash.com/photo-1596766465492-f705786fce01?q=80&w=2000&auto=format&fit=crop",
+    image: "/images/agv-helmet.png",
   },
   {
     id: 3,

@@ -14,7 +14,7 @@ const HERO_POSTERS = [
     cta: "View Product Description",
     slug: "alpinestars-supertech-r-boots",
     link: "/products/alpinestars-supertech-r-boots",
-    image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=2000&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=70&w=1200&auto=format&fit=crop",
   },
   {
     id: 2,
@@ -34,7 +34,7 @@ const HERO_POSTERS = [
     cta: "View Product Description",
     slug: "dainese-racing-4",
     link: "/products/dainese-racing-4",
-    image: "https://images.unsplash.com/photo-1551028719-00167b16eac5?q=80&w=2000&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1551028719-00167b16eac5?q=70&w=1200&auto=format&fit=crop",
   },
 ];
 
@@ -72,6 +72,9 @@ export function HeroSection() {
                 src={p.image}
                 alt={p.title}
                 fill
+                sizes="100vw"
+                placeholder="blur"
+                blurDataURL="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMGYxNzJhIi8+PC9zdmc+"
                 className="object-cover object-center hover:scale-105 transition-transform duration-700"
                 priority={idx === 0}
               />

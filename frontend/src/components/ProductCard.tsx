@@ -53,8 +53,9 @@ const ProductCard = ({ product }: ProductCardProps) => {
             src={imageUrl}
             alt={product.name}
             fill
-            unoptimized={true} // Bypasses slow local dev image processing, loads directly from your fast CDN
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            placeholder="blur"
+            blurDataURL="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjFmNWY5Ii8+PC9zdmc+"
             className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out mix-blend-multiply"
           />
           

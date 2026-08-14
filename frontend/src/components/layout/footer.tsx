@@ -13,11 +13,6 @@ const Footer = () => {
     <footer className="relative bg-slate-950 text-slate-300 overflow-hidden mt-auto pt-0">
       
       {/* Hidden SVG Filter for Real-time Hardware Image Sharpening */}
-      <svg className="hidden" aria-hidden="true">
-        <filter id="sharp-filter">
-          <feConvolveMatrix order="3" kernelMatrix="0 -0.5 0 -0.5 3 -0.5 0 -0.5 0" />
-        </filter>
-      </svg>
 
       {/* Top 4:1 Ultrawide Panoramic Anime Mountain Rider Banner */}
       <div className="relative w-full h-[200px] sm:h-[240px] md:h-[280px] lg:h-[320px] overflow-hidden bg-slate-950 flex items-center justify-center">
@@ -26,7 +21,6 @@ const Footer = () => {
           src="/footer-img.jpg"
           alt="Golden Mountain Rider Ultrawide Panoramic Anime Artwork"
           className="w-full h-full object-cover object-[center_60%] contrast-[1.15] saturate-[1.1] brightness-[0.95]"
-          style={{ filter: "url(#sharp-filter)" }}
         />
 
         {/* Soft Minimal Gradient Overlay */}

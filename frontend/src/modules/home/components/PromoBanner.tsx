@@ -3,17 +3,22 @@
 import Link from "next/link";
 import { ArrowRight, ShieldCheck } from "lucide-react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export function PromoBanner() {
   return (
     <section className="relative w-full h-[360px] md:h-[420px] overflow-hidden bg-slate-950 flex items-center justify-center border-y border-slate-900">
       {/* Background Image */}
       <div className="absolute inset-0 w-full h-full">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?q=80&w=2500&auto=format&fit=crop"
-          alt="Mid Season Rider Sale"
-          className="w-full h-full object-cover object-center opacity-40"
+        <Image 
+          src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?q=80&w=2500&auto=format&fit=crop" 
+          alt="Mid Season Rider Sale" 
+          fill 
+          sizes="100vw" 
+          placeholder="blur"
+          blurDataURL="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMGYxNzJhIi8+PC9zdmc+"
+          className="object-cover object-center opacity-40" 
+          priority={false} 
         />
       </div>
 

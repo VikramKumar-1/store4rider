@@ -11,8 +11,8 @@ export function BrandTrustSection() {
         <div className="w-full bg-slate-950 rounded-[2rem] p-6 sm:p-8 md:p-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 md:gap-8 relative overflow-hidden shadow-2xl shadow-slate-950/40 border border-slate-800">
           
           {/* Glowing Overlays: Lime & Red */}
-          <div className="absolute -top-32 -right-32 w-72 h-72 bg-lime-500/20 blur-3xl rounded-full pointer-events-none mix-blend-screen" />
-          <div className="absolute -bottom-32 -left-32 w-72 h-72 bg-brand/20 blur-3xl rounded-full pointer-events-none mix-blend-screen" />
+          <div className="absolute -top-32 -right-32 w-72 h-72 bg-lime-500/20 blur-xl rounded-full pointer-events-none" />
+          <div className="absolute -bottom-32 -left-32 w-72 h-72 bg-brand/20 blur-xl rounded-full pointer-events-none" />
 
           {/* Left-Aligned Text Content */}
           <div className="text-left relative z-10 max-w-xl">
